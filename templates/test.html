@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block content %}
+    {% if user.username == 'Ali' or user.username == 'LordLoss' %}
+        <h1>Welcome master</h1>
+    {% elif 'saint' in user.username.lower or 'shaki' in user.username.lower %}
+        <h1>Hey mommy :)</h1>
+        <img src="https://images-na.ssl-images-amazon.com/images/I/41QKzYwjHGL._SX331_BO1,204,203,200_.jpg" alt="You're the f*cking best mom ever">
+    {% elif 'isaac' in user.username.lower %}
+        <h1>Welcome <strong>Thunder Bird - Grand Master - Prince Charming!</strong></h1>
+    {% else %}
+        <h1>You are now logged in!</h1>
+    {% endif %}
+{% endblock %}
